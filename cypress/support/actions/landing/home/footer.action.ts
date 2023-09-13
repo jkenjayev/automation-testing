@@ -11,9 +11,9 @@ export class FooterAction {
 	openP2 = () => footer.pTwo().trigger('click', { ctrlKey: true });
 	openP3 = () => footer.pThree().trigger('click', { ctrlKey: true });
 	openP4 = () => footer.pFour().trigger('click', { ctrlKey: true });
-	openTelegram = () => footer.telegram().click({force: true});
+	openTelegram = () => footer.telegram().trigger('click', { ctrlKey: true });
 	openFacebook = () => footer.facebook().click({force: true});
-	openYoutube = () => footer.youtube().click({force: true});
+	openYoutube = () => footer.youtube().trigger('click', { ctrlKey: true });
 	openInstagram = () => footer.instagram().click({force: true});
 	openLinkedIn = () => footer.linkedIn().click({force: true});
 	typePhone = () => footer.phone().should("contain", '+998 (78) 888 9 888');

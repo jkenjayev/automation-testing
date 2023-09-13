@@ -8,7 +8,7 @@ export class BlogAction {
 	openBlogDetails = () => blogs.blogArticle().children().first().click({force: true});
 	showMoreBlogs = () => blogs.moreBtn().click({force: true});
 	showShareSocials = () => blogs.shareBtn().click({force: true});
-	shareToTelegram = () => blogs.shareSocial().eq(0).click({force: true});
+	shareToTelegram = () => blogs.shareSocial().eq(0).should("contain.text", "Telegram");
 	shareToFacebook = () => blogs.shareSocial().eq(1).click({force: true});
 	copyLink = () => blogs.shareSocial().eq(2).click({force: true});
 }
