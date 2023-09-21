@@ -1,4 +1,4 @@
-import {LoginWithPhoneRepo} from "../../../repositories/student";
+import {LoginWithPhoneRepo} from "../../../repositories";
 
 const login = new LoginWithPhoneRepo();
 
