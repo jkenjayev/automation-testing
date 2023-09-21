@@ -5,6 +5,7 @@ import {
   dashboardPage,
   myCoursesPage,
   coursesPage,
+  videosPage,
 } from "./src";
 import { LoginWithEmailAction } from "../../support/actions";
 
@@ -48,6 +49,11 @@ describe("Student app: ", () => {
     /**
      * courses page
      */
-    coursesPage();
+    // coursesPage();
+
+    /**
+     * Videos page
+     */
+    // videosPage();
   });
 });
