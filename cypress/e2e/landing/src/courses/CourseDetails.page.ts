@@ -1,6 +1,6 @@
-import {CourseDetailsAction, CourseCallbackAction} from "../../../../support/actions";
+import {AllCourseDetailsAction, CourseCallbackAction} from "../../../../support/actions";
 
-const courseDetails: CourseDetailsAction = new CourseDetailsAction();
+const courseDetails: AllCourseDetailsAction = new CourseDetailsAction();
 const courseCallback: CourseCallbackAction = new CourseCallbackAction();
 
 export function CourseDetailsPage() {

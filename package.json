@@ -23,8 +23,12 @@
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0",
-    "typescript": "^5.2.2",
     "moment-timezone": "^0.5.43",
-    "rimraf": "^5.0.0"
+    "rimraf": "^5.0.0",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "cypress-if": "^1.10.5",
+    "prettier": "3.0.3"
   }
 }
