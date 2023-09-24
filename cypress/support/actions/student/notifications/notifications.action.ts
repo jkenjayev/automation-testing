@@ -1,4 +1,5 @@
 import { NotificationsRepo } from "../../../repositories";
+
 const notification = new NotificationsRepo();
 
 export class NotificationsAction {
@@ -10,4 +11,9 @@ export class NotificationsAction {
     notification
       .notReadNotification()
       .click({ force: true });
+  filterNotifications = () => {
+    notification.filters();
+    cy.wait(500);
+    notification.parentFilter();
+  };
 }
