@@ -14,7 +14,7 @@
     "send-result-telegram": "node ./telegram/index.js",
     "transfer": "npm run copy-videos; npm run copy-screenshots; npm run compress-result",
     "pretest": "rimraf ./cypress/videos ./cypress/reports ./cypress/report ./cypress/result.json ./cypress/screenshots ./cypress/reports.zip",
-    "test": "npm run with-report; npm run merge-reports; npm run html-report; npm run transfer"
+    "test": "npm run with-report; npm run merge-reports; npm run html-report; npm run transfer; send-result-telegram"
   },
   "keywords": [],
   "author": "",
