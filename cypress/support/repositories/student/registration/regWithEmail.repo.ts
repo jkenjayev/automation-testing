@@ -10,3 +10,5 @@ export class RegWithEmailRepo {
 	otp = () => cy.get("#code");
 	continueBtn = () => cy.get('button').contains('Davom etish');
 }
+
+export const regWithEmailRepo: RegWithEmailRepo = new RegWithEmailRepo();

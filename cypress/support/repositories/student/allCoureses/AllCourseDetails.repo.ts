@@ -7,3 +7,5 @@ export class AllCourseDetailsRepo {
 	freeVideo = () => cy.get('button').contains('Bepul ko‘rish');
 	buyModule = () => cy.get('ol li div').contains("-modul");
 }
+
+export const allCoursesDetailsRepo: AllCourseDetailsRepo = new AllCourseDetailsRepo();

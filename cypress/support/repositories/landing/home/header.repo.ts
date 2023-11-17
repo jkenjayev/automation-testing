@@ -4,3 +4,5 @@ export class HeaderRepo {
     blog = () => cy.get('[href="/blog"]').contains("Blog");
     stdLink = () => cy.get('li').contains("Kirish");
 }
+
+export const headerRepo = new HeaderRepo();

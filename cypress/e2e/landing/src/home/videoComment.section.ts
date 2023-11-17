@@ -1,7 +1,6 @@
-import {VideoCommentAction} from "../../../../support/actions";
-const {playVideo} = new VideoCommentAction();
+import {videoCommentAction} from "../../../../support";
 export function videoCommentSection() {
     describe("Video Comment section: ", () => {
-        it("should play video ", playVideo)
+        it("should play video ", videoCommentAction.playVideo)
     })
 }

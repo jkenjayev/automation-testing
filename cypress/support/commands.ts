@@ -1,4 +1,8 @@
 /// <reference types="cypress" />
+import { LoginWithEmailAction } from "./actions";
+
+const { withEmail }: LoginWithEmailAction =
+  new LoginWithEmailAction();
 // ***********************************************
 // This example commands.ts shows you how to
 // create various custom commands and overwrite
@@ -25,46 +29,30 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 //
-// import Chainable = Cypress.Chainable;
-//
-// declare global {
-//   namespace Cypress {
-//     interface Chainable {
-//       // login(email: string, password: string): Chainable<void>
-//       // drag(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       // dismiss(subject: string, options?: Partial<TypeOptions>): Chainable<Element>
-//       // visit(originalFn: CommandOriginalFn, url: string, options: Partial<VisitOptions>): Chainable<Element>
-//         clickf(f: string, m: string):Chainable<unknown>
-//     }
-//   }
-// }
 
+Cypress.Commands.add(
+  "login",
+  (url: string, email: string, password: string) => {
+    cy.visit(url);
+    withEmail(email, password);
+    
+  })
+;
 
+Cypress.Commands.add("openLanding", (url: string) => {
+  cy.visit(url);
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      login(
+        url: string,
+        email: string,
+        password: string
+      ): Chainable;
+      
+      openLanding(url: string): Chainable;
+    }
+  }
+}

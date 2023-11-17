@@ -1,5 +1,4 @@
-import {CoursesRepo} from "../../../repositories";
-const courses = new CoursesRepo();
+import {coursesRepo as courses} from "../../../repositories";
 
 export class CoursesAction {
 	openCoursesPage = () => courses.coursesPage().click({force: true});
@@ -14,3 +13,5 @@ export class CoursesAction {
 	openAccessibleCourseDetails = () => courses.course().contains("Davomiylik:").eq(0).click({force: true});
 	openInaccessibleCourseDetails = () => courses.course().should('not.have.text', "Davomiylik:").eq(0).click({force: true});
 }
+
+export const coursesAction: CoursesAction = new CoursesAction();

@@ -1,5 +1,4 @@
-import {CourseDetailsRepo} from "../../../repositories";
-const courseDetails = new CourseDetailsRepo();
+import {courseDetailsRepo as courseDetails} from "../../../repositories";
 
 export class CourseDetailsAction {
 	openAccessibleCourseDetails = () => courseDetails.course().contains("Davomiylik:").eq(0).click({force: true});
@@ -13,3 +12,4 @@ export class CourseDetailsAction {
 	menu5 = () => courseDetails.navigationMenu().eq(4).children().first().click({force: true});
 	menu6 = () => courseDetails.navigationMenu().eq(5).children().first().click({force: true});
 }
+export const courseDetailsAction: CourseDetailsAction = new CourseDetailsAction();

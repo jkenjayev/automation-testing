@@ -1,21 +1,21 @@
-import {CallbackRepo} from "../../../repositories";
-
-const {stdName, faq, nickName, privacy, submitBtn, phone, checkbox} = new CallbackRepo();
+import { callBackRepo  } from "../../../repositories";
 
 export class CallbackAction {
-	sendFeedbackByPhone = (name: string, phoneNumber: string) => {
-		stdName().type(name, {force: true});
-		phone().type(phoneNumber, {force: true});
-		submitBtn().click({force: true});
-	}
-	
-	sendFeedbackByTelegram = (name: string, nick: string) => {
-		checkbox().check({force: true});
-		stdName().type(name, {force: true});
-		nickName().type(nick, {force: true});
-		submitBtn().click({force: true});
-	}
-	
-	openFaq = () => faq().click({force: true});
-	openPrivacy = () => privacy().click({force: true});
+  sendFeedbackByPhone = (name: string, phoneNumber: string) => {
+    callBackRepo.stdName().type(name, { force: true });
+    callBackRepo.phone().type(phoneNumber, { force: true });
+    callBackRepo.submitBtn().click({ force: true });
+  };
+  
+  sendFeedbackByTelegram = (name: string, nick: string) => {
+    callBackRepo.checkbox().check({ force: true });
+    callBackRepo.stdName().type(name, { force: true });
+    callBackRepo.nickName().type(nick, { force: true });
+    callBackRepo.submitBtn().click({ force: true });
+  };
+  
+  openFaq = () => callBackRepo.faq().click({ force: true });
+  openPrivacy = () => callBackRepo.privacy().click({ force: true });
 }
+
+export const callBackAction = new CallbackAction();

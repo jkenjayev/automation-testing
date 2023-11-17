@@ -6,3 +6,5 @@ export class CourseCallbackRepo {
 	privacy = () => cy.get('[href="/oferta.pdf"]').contains("Platformadan foydalanish qoidalari");
 	submitBtn = () => cy.get('[type="submit"]').contains("So‘rov yuborish");
 }
+
+export const courseCallbackRepo = new CourseCallbackRepo();

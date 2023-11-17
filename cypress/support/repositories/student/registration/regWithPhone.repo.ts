@@ -9,3 +9,5 @@ export class RegWithPhoneRepo {
 	privacy = () => cy.get('[href="/static/media/oferta.98bafc87b0606713cd40.pdf"]').eq(0);
 	privacyPolicy = () => cy.get('[href="/static/media/oferta.98bafc87b0606713cd40.pdf"]').contains('Foydalanish qoidalariga');
 }
+
+export const regWithPhoneRepo: RegWithPhoneRepo = new RegWithPhoneRepo();

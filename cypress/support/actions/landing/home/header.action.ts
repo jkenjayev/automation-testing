@@ -1,10 +1,10 @@
-import {HeaderRepo} from "../../../repositories";
-const header = new HeaderRepo();
+import { headerRepo } from "../../../repositories";
+
 export class HeaderAction {
-    constructor() {
-    }
-    clickLogo = () => header.logo().click({force: true});
-    openCourses = () => header.course().click({force: true});
-    openBlog = () => header.blog().click({force: true});
-    openStd = () => header.stdLink().click({force: true});
+  clickLogo = () => headerRepo.logo().click({ force: true });
+  openCourses = () => headerRepo.course().click({ force: true });
+  openBlog = () => headerRepo.blog().click({ force: true });
+  openStd = () => headerRepo.stdLink().click({ force: true });
 }
+
+export const headerAction: HeaderAction = new HeaderAction();

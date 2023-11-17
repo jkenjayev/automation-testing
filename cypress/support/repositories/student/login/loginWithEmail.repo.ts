@@ -10,3 +10,5 @@ export class LoginWithEmailRepo {
 	newPwd = () => cy.get('[name="new_password"]');
 	checkPwd = () => cy.get('[name="new_password_check"]');
 }
+
+export const logWithEmailRepo: LoginWithEmailRepo = new LoginWithEmailRepo();

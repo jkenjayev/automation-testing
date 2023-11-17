@@ -3,3 +3,4 @@ export * from "./dashboard";
 export * from "./myCoureses";
 export * from "./videos";
 export * from "./notifications";
+export * from "./certificates";

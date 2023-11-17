@@ -1,6 +1,4 @@
-import {BlogAction} from "../../../../support/actions/landing/blog";
-
-const blog: BlogAction = new BlogAction();
+import {blogAction as blog} from "../../../../support/actions/landing/blog";
 
 export function blogPage() {
 	describe("Blogs page: ", () => {

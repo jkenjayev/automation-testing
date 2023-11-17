@@ -7,3 +7,5 @@ export class BlogsRepo {
 	shareBtn = () => cy.get('.blog-single__share-btn');
 	shareSocial = () => cy.get(".blog-single__share-item");
 }
+
+export const blogsRepo: BlogsRepo = new BlogsRepo();

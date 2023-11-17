@@ -1,21 +1,23 @@
 /// <reference types="cypress" />
 import {
-  loginPage,
-  registerPage,
-  dashboardPage,
-  myCoursesPage,
   coursesPage,
-  videosPage,
+  certificatesPage,
+  dashboardPage,
+  loginPage,
+  myCoursesPage,
   notificationPage,
+  registerPage,
+  settingsPage,
+  videosPage,
 } from "./src";
-import { LoginWithEmailAction } from "../../support/actions";
+import { LoginWithEmailAction } from "../../support";
 
 const { withEmail } = new LoginWithEmailAction();
 
 describe("Student app: ", () => {
-  beforeEach(() =>
-    cy.visit(Cypress.env("STUDENT_URL")),
-  );
+  // beforeEach(() =>
+  //   cy.visit(Cypress.env("STUDENT_URL")),
+  // );
   describe("Authorization", () => {
     /**
      * Login page
@@ -29,9 +31,10 @@ describe("Student app: ", () => {
 
   describe("Student panel", () => {
     beforeEach(() =>
-      withEmail(
+      cy.login(
+        Cypress.env("STUDENT_URL"),
         Cypress.env("student_email"),
-        Cypress.env("student_pwd"),
+        Cypress.env("STUDENT_URL"),
       ),
     );
     afterEach(() =>
@@ -40,7 +43,7 @@ describe("Student app: ", () => {
     /**
      * Dashboard page
      */
-    // dashboardPage();
+    dashboardPage();
 
     /**
      * My courses page
@@ -60,6 +63,11 @@ describe("Student app: ", () => {
     /**
      * notifications page
      */
-    notificationPage();
+    // notificationPage();
+
+    /**
+     * certificates page
+     */
+    // certificatesPage();
   });
 });

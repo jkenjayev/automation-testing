@@ -1,20 +1,20 @@
-import {CourseCallbackRepo} from "../../../repositories";
-
-const {stdName, nickName, privacy, submitBtn, phone, checkbox} = new CourseCallbackRepo();
+import { courseCallbackRepo } from "../../../repositories";
 
 export class CourseCallbackAction {
-	sendFeedbackByPhone = (name: string, phoneNumber: string) => {
-		stdName().type(name, {force: true});
-		phone().type(phoneNumber, {force: true});
-		submitBtn().click({force: true});
-	}
-	
-	sendFeedbackByTelegram = (name: string, nick: string) => {
-		checkbox().check({force: true});
-		stdName().type(name, {force: true});
-		nickName().type(nick, {force: true});
-		submitBtn().click({force: true});
-	}
-	
-	openPrivacy = () => privacy().click({force: true});
+  sendFeedbackByPhone = (name: string, phoneNumber: string) => {
+    courseCallbackRepo.stdName().type(name, { force: true });
+    courseCallbackRepo.phone().type(phoneNumber, { force: true });
+    courseCallbackRepo.submitBtn().click({ force: true });
+  };
+  
+  sendFeedbackByTelegram = (name: string, nick: string) => {
+    courseCallbackRepo.checkbox().check({ force: true });
+    courseCallbackRepo.stdName().type(name, { force: true });
+    courseCallbackRepo.nickName().type(nick, { force: true });
+    courseCallbackRepo.submitBtn().click({ force: true });
+  };
+  
+  openPrivacy = () => courseCallbackRepo.privacy().click({ force: true });
 }
+
+export const courseCallbackAction: CourseCallbackAction = new CourseCallbackAction();

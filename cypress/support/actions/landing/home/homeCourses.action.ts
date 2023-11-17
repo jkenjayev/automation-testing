@@ -1,6 +1,8 @@
-import {HomeCoursesRepo} from "../../../repositories";
-const {firstCourse, coursesLink} = new HomeCoursesRepo();
+import { homeCoursesRepo } from "../../../repositories";
+
 export class HomeCoursesAction {
-    openFirstCourse = () => firstCourse().click({force: true});
-    openCourses = () => coursesLink().click({force: true});
+  openFirstCourse = () => homeCoursesRepo.firstCourse().click({ force: true });
+  openCourses = () => homeCoursesRepo.coursesLink().click({ force: true });
 }
+
+export const homeCourses: HomeCoursesAction = new HomeCoursesAction();

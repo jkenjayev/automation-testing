@@ -1,5 +1,4 @@
-import {BlogsRepo} from "../../../repositories/landing/blog";
-const blogs = new BlogsRepo();
+import {blogsRepo as blogs} from "../../../repositories/landing/blog";
 export class BlogAction {
 	openBlogs = () => blogs.blogs().click({force: true});
 	filter1 = () => blogs.blogFilter().children().eq(1).click({force: true});
@@ -12,3 +11,5 @@ export class BlogAction {
 	shareToFacebook = () => blogs.shareSocial().eq(1).click({force: true});
 	copyLink = () => blogs.shareSocial().eq(2).click({force: true});
 }
+
+export const blogAction: BlogAction= new BlogAction();

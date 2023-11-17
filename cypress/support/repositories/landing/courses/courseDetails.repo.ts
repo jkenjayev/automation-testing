@@ -7,3 +7,5 @@ export class CourseDetailsRepo {
 	lessonTitle = () => cy.get('.accordion-list__item').eq(1).children().first();
 	navigationMenu = () => cy.get(".course-main__navigation").children();
 }
+
+export const courseDetailsRepo: CourseDetailsRepo = new CourseDetailsRepo();

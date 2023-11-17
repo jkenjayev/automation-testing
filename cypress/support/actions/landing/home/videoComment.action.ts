@@ -1,5 +1,7 @@
-import {VideoCommentRepo} from "../../../repositories";
-const {videoComment} = new VideoCommentRepo();
+import { videoCommentRepo } from "../../../repositories";
+
 export class VideoCommentAction {
-    playVideo = () => videoComment().click({force: true});
+  playVideo = () => videoCommentRepo.videoComment().click({ force: true });
 }
+
+export const videoCommentAction: VideoCommentAction = new VideoCommentAction();

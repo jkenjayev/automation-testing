@@ -1,5 +1,7 @@
-import {AdvantagesRepo} from "../../../repositories";
-const advantages = new AdvantagesRepo();
+import { ourAdvantagesRepo } from "../../../repositories";
+
 export class AdvantagesAction {
-    showMoreAdv = () => advantages.showMore().click({force: true});
+  showMoreAdv = () => ourAdvantagesRepo.showMore().click({ force: true });
 }
+
+export const ourAdvantagesAction: AdvantagesAction = new AdvantagesAction();

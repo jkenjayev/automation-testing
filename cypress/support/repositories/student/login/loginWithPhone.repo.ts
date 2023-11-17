@@ -10,3 +10,5 @@ export class LoginWithPhoneRepo {
 	newPwd = () => cy.get('[name="new_password"]');
 	checkPwd = () => cy.get('[name="new_password_check"]');
 }
+
+export const logWithPhoneRepo: LoginWithPhoneRepo = new LoginWithPhoneRepo();

@@ -7,3 +7,5 @@ export class CoursesRepo {
 	categoryThree = () => cy.get('.courses-tabbar__list').children().eq(3);
 	course = () => cy.get('.course-card__item');
 }
+
+export const coursesRepo: CoursesRepo = new CoursesRepo();
