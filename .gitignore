@@ -1,0 +1,8 @@
+/node_modules
+/cypress/report
+/cypress/reports
+/cypress/videos
+/cypress/screenshots
+/cypress/result.json
+/cypress/reports.zip
+.idea
