@@ -6,3 +6,4 @@
 /cypress/result.json
 /cypress/reports.zip
 .idea
+.DS_Store
