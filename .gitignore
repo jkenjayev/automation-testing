@@ -5,3 +5,4 @@
 /cypress/screenshots
 /cypress/result.json
 /cypress/reports.zip
+.idea
