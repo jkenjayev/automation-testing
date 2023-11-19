@@ -43,7 +43,7 @@ export function CourseDetailsPage() {
       courseDetails.selectLessonVideo
     );
     it(
-      "should redirect to student app => course details",
+      "should redirect to student app => course details with checked all modules to buy",
       courseDetails.buyCourse
     );
     it("should send feedback by phone", () =>

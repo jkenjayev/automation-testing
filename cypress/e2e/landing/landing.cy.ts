@@ -7,8 +7,6 @@ import {
 
 describe("Najottalim.uz: ", () => {
   beforeEach(() => {
-    // cy.clearAllCookies();
-    // cy.visit(Cypress.env("LANDING_URL"))
     cy.openLanding(Cypress.env("LANDING_URL"));
   });
   
