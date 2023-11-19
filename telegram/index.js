@@ -1,7 +1,6 @@
 const axios = require("axios");
 const path = require("path");
 const FormData = require("form-data");
-const { resolve } = require("node:path");
 const moment = require("moment-timezone");
 const fs = require("node:fs");
 const fileToSend = path.join(path.resolve(__dirname, "../cypress/reports.zip"));
