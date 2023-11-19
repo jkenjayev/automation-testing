@@ -20,6 +20,7 @@ export function blogPage() {
 			});
 			it("should copy blog link", () => {
 				blog.showShareSocials();
+				blog.copyLink();
 			})
 		})
 		
