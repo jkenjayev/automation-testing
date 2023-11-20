@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "npx cypress open",
-    "with-report": "npx cypress run -b chrome --headed --reporter mochawesome --spec 'cypress/e2e/landing/landing.cy.ts'",
+    "with-report": "npx cypress run  --reporter mochawesome --spec 'cypress/e2e/landing/landing.cy.ts'",
     "merge-reports": "npx mochawesome-merge ./cypress/report/mochawesome-report/*.json > ./cypress/result.json",
     "html-report": "npx marge ./cypress/result.json --reportDir ./cypress/reports",
     "copy-videos": "cp -R ./cypress/videos ./cypress/reports",
