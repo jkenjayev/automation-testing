@@ -1,2 +1,1 @@
-cd /home/abutechdev/projects/nt-platform/qa/ntop-automation
-/home/abutechdev/.nvm/versions/node/v16.3.0/bin/npm run test
+####### here should be script for running automation tests 4 times a day #####

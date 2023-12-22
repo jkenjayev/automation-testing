@@ -6,7 +6,7 @@ const fs = require("node:fs");
 const fileToSend = path.join(path.resolve(__dirname, "../cypress/reports.zip"));
 const caption = "test run date: " + createExecuteTime();
 
-const token = "6681396777:AAF6iYwVjMvyq9lyjNBhDZEJwBKHO9odZNo";
+const token = "xxxxxxxxxxxxxxxxxxxxx";
 const chatId = "-1001913146155";
 const formData = new FormData();
 formData.append("document", fs.createReadStream(fileToSend));
